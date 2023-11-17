@@ -12,3 +12,4 @@ Resources:
         - 
           AttributeName: "Artist"
           AttributeType: "S"
+      TableName: "myTableName"
