@@ -24,7 +24,7 @@ aws cloudformation describe-stacks --stack-name ccDemoAppBucket --query "Stacks[
 ### Delete Stack ###
 
 ```
-ws cloudformation delete-stack --stack-name ccDemoCodePipeline
+aws cloudformation delete-stack --stack-name ccDemoCodePipeline
 
 aws cloudformation delete-stack --stack-name ccDemoCodeDeploy
 
