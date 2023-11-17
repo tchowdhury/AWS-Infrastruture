@@ -11,14 +11,14 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Join ['-' [!Ref AWS::AccountId, !Ref BucketName, 'code-pipeline-artifact-bucket']]  
+      BucketName: !Join [ '-', [ !Ref AWS::AccountId, !Ref BucketName, 'code-pipeline-artifact-bucket' ] ]  
       VersioningConfiguration:
         Status: Enabled	
 
 Outputs:
   ccStackArtifactBucket:
     Description: CodePipeline Artifact Bucket Name
-    Value: !Ref BucketName
+    Value: !Join [ '-', [ !Ref AWS::AccountId, !Ref BucketName, 'code-pipeline-artifact-bucket' ] ]  
     Export:
       Name: ccStackArtifactBucket
 

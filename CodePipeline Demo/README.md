@@ -11,7 +11,7 @@ aws cloudformation validate-template --template-body file://2_S3ArtifactBucket.y
 
 aws cloudformation create-stack --stack-name ccDemoAppBucket --template-body file://2_S3ArtifactBucket.yml --parameters file://params/2_S3ArtifactBucket-params.json 
 
-aws cloudformation describe-stacks --stack-name ccDemoAppBucket | grep StackStatus
+aws cloudformation describe-stacks --stack-name ccDemoAppBucket --query "Stacks[0].StackStatus"
 ```
 
 ### CodeBuild ###
@@ -22,3 +22,15 @@ aws cloudformation describe-stacks --stack-name ccDemoAppBucket | grep StackStat
 ### CodePipeline ###
 
 ### Delete Stack ###
+
+```
+ws cloudformation delete-stack --stack-name ccDemoCodePipeline
+
+aws cloudformation delete-stack --stack-name ccDemoCodeDeploy
+
+aws cloudformation delete-stack --stack-name ccDemoCodeBuild
+
+aws cloudformation delete-stack --stack-name ccDemoAppBucket
+
+aws cloudformation delete-stack --stack-name ccDemoAppRepo
+```

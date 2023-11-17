@@ -1,7 +1,6 @@
 [
     {
         "ParameterKey": "BucketName",
-        //"ParameterValue": "ADD YOUR BUCKET NAME HERE"
         "ParameterValue": "demo-dynamodb"
     }
 ]
