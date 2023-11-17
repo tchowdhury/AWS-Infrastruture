@@ -16,6 +16,8 @@ aws cloudformation describe-stacks --ADD YOUR STACK NAME ccDemoCodeBuild | grep 
 
 ### CodeBuild ###
 
+new code
+
 ### CodeDeploy ###
 
 ### CodePipeline ###
