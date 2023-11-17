@@ -7,16 +7,15 @@
 ### S3 Artifact Bucket ###
 
 ```
-aws cloudformation validate-template --template-body file://3_CodeBuild.yml
+aws cloudformation validate-template --template-body file://2_S3ArtifactBucket.yml 
 
-aws cloudformation create-stack --ADD YOUR STACK NAME ccDemoCodeBuild --template-body file://3_CodeBuild.yml --parameters file://params/3_CodeBuild-params.json --capabilities CAPABILITY_IAM --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation create-stack --stack-name ccDemoAppBucket --template-body file://2_S3ArtifactBucket.yml --parameters file://params/2_S3ArtifactBucket-params.json 
 
-aws cloudformation describe-stacks --ADD YOUR STACK NAME ccDemoCodeBuild | grep StackStatus
+aws cloudformation describe-stacks --stack-name ccDemoAppBucket | grep StackStatus
 ```
 
 ### CodeBuild ###
 
-new code
 
 ### CodeDeploy ###
 
